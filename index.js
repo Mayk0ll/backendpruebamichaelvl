@@ -13,27 +13,27 @@ app.listen(process.env.PORT || 3001, () => {
     console.log('Listening on port', process.env.PORT || 3001)
 })
 
-// app.use('/users', rutas)
+app.use('/users', rutas)
 
-// // app.get('/publicaciones', async (req, res) => {
-// //     try {
-// //         const results = await pool.query(`select * from usuarios`)
-// //         res.send(results.rows)
-// //     } catch (error) {
-// //         console.log(error)
-// //     }
+app.get('/publicaciones', async (req, res) => {
+    try {
+        const results = await pool.query(`select * from usuarios`)
+        res.send(results.rows)
+    } catch (error) {
+        console.log(error)
+    }
     
-// // })
-// // app.get('/ventas', async (req, res) => {
-// //     try {
-// //         const results = await pool.query(`select * from usuarios`)
-// //         res.send(results.rows)
-// //     } catch (error) {
-// //         console.log(error)
-// //     }
+})
+app.get('/ventas', async (req, res) => {
+    try {
+        const results = await pool.query(`select * from usuarios`)
+        res.send(results.rows)
+    } catch (error) {
+        console.log(error)
+    }
     
-// // })
+})
 
-// app.get('*',(req, res) => {
-//     res.status(404).json('pagina no encontrada')
-// })
+app.get('*',(req, res) => {
+    res.status(404).json('pagina no encontrada')
+})
