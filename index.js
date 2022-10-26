@@ -17,7 +17,7 @@ app.use('/users', rutas)
 
 app.get('/publicaciones', async (req, res) => {
     try {
-        const results = await pool.query(`select * from usuarios`)
+        const results = await pool.query(`select * from publicaciones`)
         res.send(results.rows)
     } catch (error) {
         console.log(error)
@@ -26,7 +26,7 @@ app.get('/publicaciones', async (req, res) => {
 })
 app.get('/ventas', async (req, res) => {
     try {
-        const results = await pool.query(`select * from usuarios`)
+        const results = await pool.query(`select * from ventas`)
         res.send(results.rows)
     } catch (error) {
         console.log(error)

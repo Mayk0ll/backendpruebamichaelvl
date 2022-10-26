@@ -34,30 +34,30 @@ INSERT INTO usuarios (documento, nombre, apellido, correo, contrasenia) VALUES (
 
 
 INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 1 y mucho mas sobre esto y publicacion', 1);
-INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 2 y mucho mas sobre esto y publicacion', 6);
-INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 3 y mucho mas sobre esto y publicacion', 7);
-INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 4 y mucho mas sobre esto y publicacion', 8);
-INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 5 y mucho mas sobre esto y publicacion', 9);
-INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 6 y mucho mas sobre esto y publicacion', 1);
-INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 7 y mucho mas sobre esto y publicacion', 6);
-INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 8 y mucho mas sobre esto y publicacion', 1);
-INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 9 y mucho mas sobre esto y publicacion', 1);
+INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 2 y mucho mas sobre esto y publicacion', 1);
+INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 3 y mucho mas sobre esto y publicacion', 2);
+INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 4 y mucho mas sobre esto y publicacion', 2);
+INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 5 y mucho mas sobre esto y publicacion', 2);
+INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 6 y mucho mas sobre esto y publicacion', 3);
+INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 7 y mucho mas sobre esto y publicacion', 4);
+INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 8 y mucho mas sobre esto y publicacion', 5);
+INSERT INTO publicaciones (descripcion,usuario) VALUES ('texto 9 y mucho mas sobre esto y publicacion', 5);
 
 
 INSERT INTO ventas (total_venta,vendedor) VALUES (15, 1);
 INSERT INTO ventas (total_venta,vendedor) VALUES (30, 1);
 INSERT INTO ventas (total_venta,vendedor) VALUES (34, 1);
-INSERT INTO ventas (total_venta,vendedor) VALUES (64, 6);
-INSERT INTO ventas (total_venta,vendedor) VALUES (13, 6);
-INSERT INTO ventas (total_venta,vendedor) VALUES (76, 6);
-INSERT INTO ventas (total_venta,vendedor) VALUES (34, 6);
-INSERT INTO ventas (total_venta,vendedor) VALUES (74, 8);
-INSERT INTO ventas (total_venta,vendedor) VALUES (34, 8);
-INSERT INTO ventas (total_venta,vendedor) VALUES (15, 8);
-INSERT INTO ventas (total_venta,vendedor) VALUES (14, 8);
-INSERT INTO ventas (total_venta,vendedor) VALUES (42, 7);
-INSERT INTO ventas (total_venta,vendedor) VALUES (65, 9);
-INSERT INTO ventas (total_venta,vendedor) VALUES (46, 9);
+INSERT INTO ventas (total_venta,vendedor) VALUES (64, 2);
+INSERT INTO ventas (total_venta,vendedor) VALUES (13, 2);
+INSERT INTO ventas (total_venta,vendedor) VALUES (76, 2);
+INSERT INTO ventas (total_venta,vendedor) VALUES (34, 2);
+INSERT INTO ventas (total_venta,vendedor) VALUES (74, 3);
+INSERT INTO ventas (total_venta,vendedor) VALUES (34, 3);
+INSERT INTO ventas (total_venta,vendedor) VALUES (15, 3);
+INSERT INTO ventas (total_venta,vendedor) VALUES (14, 3);
+INSERT INTO ventas (total_venta,vendedor) VALUES (42, 4);
+INSERT INTO ventas (total_venta,vendedor) VALUES (65, 5);
+INSERT INTO ventas (total_venta,vendedor) VALUES (46, 1);
 
 
 
