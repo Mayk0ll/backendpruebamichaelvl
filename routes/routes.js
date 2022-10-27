@@ -47,11 +47,12 @@ router.put('/:id', async (req, res) => {
     }
 })
 
-router.post('/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
         const {id} = req.params;
-        const resp = await pool.query(`DELETE FROM usuarios WHERE id_usuario = '${Number(id)}'`)
-        res.send(resp) 
+        await pool.query(`DELETE FROM usuarios WHERE id_usuario = '${Number(id)}'`)
+        const resp = await pool.query(`select * from usuarios`)
+        res.send(resp.rows) 
     } catch (error) {
         res.status(404).send({message: 'Error'})
     }
