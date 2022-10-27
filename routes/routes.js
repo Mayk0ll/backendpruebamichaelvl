@@ -12,6 +12,16 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/:id', async (req, res) => {
+    try {
+        const {id} = req.params
+        const resp = await pool.query(`select * from usuarios WHERE id_usuario = '${Number(id)}'`)
+        res.send(resp.rows)
+    } catch (error) {
+        console.log(error)
+    }
+})
+
 router.post('/', async (req, res) => {
     try {
         const info = req.body;
