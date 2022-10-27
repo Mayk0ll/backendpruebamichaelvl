@@ -2,7 +2,8 @@ const express = require('express');
 const morgan = require("morgan");
 const app = express();
 const rutas = require('./routes/routes')
-const {pool} = require ('./pg')
+const { getVentas, getPublicaciones } = require('./controllers/queryControllers')
+
 
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 app.use(express.json({ limit: "50mb" }));
@@ -17,8 +18,8 @@ app.use('/users', rutas)
 
 app.get('/publicaciones', async (req, res) => {
     try {
-        const results = await pool.query(`select * from publicaciones`)
-        res.send(results.rows)
+        const results = await getPublicaciones();
+        res.send(results)
     } catch (error) {
         console.log(error)
     }
@@ -26,8 +27,8 @@ app.get('/publicaciones', async (req, res) => {
 })
 app.get('/ventas', async (req, res) => {
     try {
-        const results = await pool.query(`select * from ventas`)
-        res.send(results.rows)
+        const results = await getVentas(); 
+        res.send(results)
     } catch (error) {
         console.log(error)
     }
