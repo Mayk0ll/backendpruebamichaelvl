@@ -62,3 +62,7 @@ INSERT INTO ventas (total_venta,vendedor) VALUES (46, 1);
 
 
 select u.nombre, u.apellido, p.descripcion from usuarios AS u JOIN publicaciones AS p ON u.id_usuario = p.usuario;
+
+
+select nombre, sum(total_venta) as suma from ventas join usuarios on id_usuario = vendedor group by nombre order by suma desc;
+select nombre, count(nombre) as cuenta from publicaciones join usuarios on id_usuario = usuario group by nombre order by cuenta desc;
