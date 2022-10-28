@@ -54,7 +54,7 @@ router.delete('/:id', async (req, res) => {
         const resp = await pool.query(`select * from usuarios`)
         res.send(resp.rows) 
     } catch (error) {
-        res.status(404).send({message: 'Error'})
+        res.status(404).send({message: 'los primeros 5 usuarios han vendido o publicado entonces no se pueden borrar'})
     }
 })
 
